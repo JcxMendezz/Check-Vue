@@ -4,7 +4,7 @@ Testing: HTTP Cat Explorer 🐱
 
 ### Descripción del Proyecto
 
-HTTP Cat Explorer es una aplicación web interactiva y visualmente atractiva desarrollada con Vue.js. Esta aplicación permite a los usuarios explorar los diferentes códigos de estado HTTP de una manera divertida y educativa, mostrando imágenes de gatos que representan cada código.
+HTTP Cat Explorer desarrollada con Vue.js.
 
 ![image](https://github.com/user-attachments/assets/58eaebde-ebef-44a3-bbd6-8645bdf683a2)
 
