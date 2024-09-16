@@ -47,6 +47,7 @@ HTTP Cat Explorer es una aplicación web interactiva y visualmente atractiva des
 - **Componente Reutilizable**: El `HttpCatViewer` se diseñó como un componente independiente para facilitar su reutilización y mantenimiento.
 
 ## Algorithmic Logic 🐍
+![image](https://github.com/user-attachments/assets/e4e53868-7cc5-4819-a0a5-6d63821e6a90)
 
 ### Descripción del Proyecto
 implementa un algoritmo eficiente para buscar números cercanos en una lista ordenada de enteros. Dado un número consultado, el algoritmo encuentra:
