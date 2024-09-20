@@ -5,16 +5,19 @@
     <div class="content">
       <header>
         <h1>
-          <span class="glitch" data-text="HTTP">HTTP</span>
-          <span class="glitch" data-text="CAT">CAT</span>
-          <span class="glitch" data-text="EXPLORER">EXPLORER</span>
+          <span class="glitch" data-text="">HTTP-</span>
+          <span class="glitch" data-text="">CAT-</span>
+          <span class="glitch" data-text="">EXPLORER</span>
         </h1>
       </header>
       <main>
         <HttpCatViewer @status-change="updateBackground" />
       </main>
       <footer>
-        <p>Creado con <span class="heart">❤️</span> y Vue.js | Imágenes de <a href="https://http.cat" target="_blank">http.cat</a></p>
+        <p>
+          Creado con <span class="heart">❤️</span> y Vue.js | Imágenes de
+          <a href="https://http.cat" target="_blank">http.cat</a>
+        </p>
       </footer>
     </div>
   </div>
@@ -30,12 +33,12 @@ export default {
   },
   methods: {
     updateBackground(status) {
-      document.body.style.setProperty('--main-color', this.getColorByStatus(status));
+      document.body.style.setProperty('--main-color', this.getColorByStatus(status))
     },
     getColorByStatus(status) {
-      const statusGroup = Math.floor(status / 100);
-      const colors = ['#2ecc71', '#3498db', '#f1c40f', '#e74c3c', '#9b59b6'];
-      return colors[statusGroup - 1] || '#34495e';
+      const statusGroup = Math.floor(status / 100)
+      const colors = ['#2ecc71', '#3498db', '#f1c40f', '#e74c3c', '#9b59b6']
+      return colors[statusGroup - 1] || '#34495e'
     }
   }
 }
@@ -47,34 +50,49 @@ export default {
 }
 
 @keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
 }
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 var(--main-color), -0.05em -0.025em 0 #0ff;
+    text-shadow:
+      0.05em 0 0 var(--main-color),
+      -0.05em -0.025em 0 #0ff;
     clip-path: rect(1px, 9999px, 5px, 0);
   }
   25% {
-    text-shadow: -0.05em -0.025em 0 var(--main-color), 0.025em 0.025em 0 #0ff;
+    text-shadow:
+      -0.05em -0.025em 0 var(--main-color),
+      0.025em 0.025em 0 #0ff;
     clip-path: rect(5px, 9999px, 15px, 0);
   }
   50% {
-    text-shadow: 0.025em 0.05em 0 var(--main-color), -0.05em -0.05em 0 #0ff;
+    text-shadow:
+      0.025em 0.05em 0 var(--main-color),
+      -0.05em -0.05em 0 #0ff;
     clip-path: rect(10px, 9999px, 25px, 0);
   }
   75% {
-    text-shadow: -0.05em -0.025em 0 var(--main-color), -0.025em -0.025em 0 #0ff;
+    text-shadow:
+      -0.05em -0.025em 0 var(--main-color),
+      -0.025em -0.025em 0 #0ff;
     clip-path: rect(20px, 9999px, 35px, 0);
   }
   100% {
-    text-shadow: -0.025em 0.025em 0 var(--main-color), 0.05em 0 0 #0ff;
+    text-shadow:
+      -0.025em 0.025em 0 var(--main-color),
+      0.05em 0 0 #0ff;
     clip-path: rect(30px, 9999px, 45px, 0);
   }
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   block-size: 100%;
@@ -90,7 +108,8 @@ body, html {
   flex-direction: column;
 }
 
-.stars, .twinkling {
+.stars,
+.twinkling {
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -107,7 +126,8 @@ body, html {
 }
 
 .twinkling {
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
+    top center;
   z-index: 1;
   animation: move-twink-back 200s linear infinite;
 }
@@ -155,7 +175,9 @@ h1 {
 
 .glitch::after {
   left: -2px;
-  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  text-shadow:
+    -2px 0 #00fff9,
+    2px 2px #ff00c1;
   animation: glitch 1s infinite linear alternate-reverse;
 }
 
@@ -190,6 +212,8 @@ footer a:hover {
 }
 
 @keyframes beat {
-  to { transform: scale(1.4); }
+  to {
+    transform: scale(1.4);
+  }
 }
 </style>
